@@ -72,11 +72,8 @@ public class TodoListControllerTest {
         TodoItem mockTodoItem = new TodoItem("Buy milk");
         when(todoListService.addTodoItem(mockTodoItem)).thenReturn(mockTodoItem);
 
-        mockMvc.perform(post("/list")).andExpectAll(
-                status().isOk(),
-                content().contentTypeCompatibleWith(TEXT_HTML),
-                content().encoding(UTF_8),
-                content().string(containsString("</html>"))
+        mockMvc.perform(post("/list").param("item_text", "makan")).andExpectAll(
+                status().is3xxRedirection()
         );
     }
 }

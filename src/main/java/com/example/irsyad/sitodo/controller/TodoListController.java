@@ -15,13 +15,12 @@ import java.util.List;
 @Controller
 public class TodoListController {
 
-    @Autowired
     private TodoListService todoListService;
 
-//    @Autowired
-//    public void setTodoListService(TodoListService todoListService) {
-//        this.todoListService = todoListService;
-//    }
+    @Autowired
+    public void setTodoListService(TodoListService todoListService) {
+        this.todoListService = todoListService;
+    }
 
     @GetMapping("/list")
     public String showList(Model model) {
@@ -36,6 +35,6 @@ public class TodoListController {
     public String addList(@RequestParam("item_text") String title){
         todoListService.addTodoItem(new TodoItem(title));
 
-        return "redirect/list";
+        return "redirect:/list";
     }
 }
