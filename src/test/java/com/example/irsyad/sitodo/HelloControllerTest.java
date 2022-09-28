@@ -39,4 +39,14 @@ public class HelloControllerTest {
                 view().name("hello")
         );
     }
+
+    @Test
+    void showMain_okResponse() throws Exception{
+        mockMvc.perform(get("/main")).andExpectAll(
+                status().isOk(),
+                content().contentTypeCompatibleWith(TEXT_HTML),
+                content().encoding(UTF_8),
+                view().name("main")
+        );
+    }
 }
