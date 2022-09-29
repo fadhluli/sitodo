@@ -1,2 +1,2 @@
 # sitodo [![Deploy](https://github.com/fadhluli/sitodo/actions/workflows/dpl.yml/badge.svg)](https://github.com/fadhluli/sitodo/actions/workflows/dpl.yml)
-![Branches](.github/badges/branches.svg)
+![Coverage](.github/badges/jacoco.svg)
