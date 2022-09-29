@@ -24,9 +24,9 @@ public class TodoItem {
         this.title = title;
     }
 
-    public TodoItem(Long id, String title){
-        this.id = id;
-        this.title = title;
-    }
+//    public TodoItem(Long id, String title){
+//        this.id = id;
+//        this.title = title;
+//    }
 
 }
