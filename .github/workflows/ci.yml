@@ -36,3 +36,4 @@ jobs:
                     cache: "maven"
             -   name: Run unit tests
                 run: mvn $MAVEN_CLI_OPTS test
+            -   run: ls -alh target
